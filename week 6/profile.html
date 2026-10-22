@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile Card</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #eef2ff;
+      color: #1b2440;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profile-card {
+      width: 320px;
+      background: white;
+      padding: 25px;
+      margin: 20px;
+      border: 2px solid #2f5bea;
+      border-radius: 15px;
+      text-align: center;
+      position: relative;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #2f5bea;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      position: absolute;
+      top: -12px;
+      right: 15px;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      margin: 10px auto;
+      border-radius: 50%;
+      background: #dbe4ff;
+      color: #2f5bea;
+      font-size: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .role {
+      color: #2f5bea;
+      display: inline-block;
+      margin: 5px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    .contact {
+      display: inline-block;
+      background: #2f5bea;
+      color: white;
+      text-decoration: none;
+      padding: 10px 18px;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="profile-card">
+    <span class="badge">Student</span>
+
+    <div class="avatar">KK</div>
+
+    <h1>Kunal Kumar</h1>
+    <span class="role">BTech CSE-AI</span>
+
+    <p>
+      First-year student interested in
+      web development and programming.
+    </p>
+
+    <a class="contact" href="mailto:student@example.com">
+      Contact Me
+    </a>
+  </div>
+</body>
+</html>
