@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dashboard</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+    }
+
+    /* Main dashboard layout */
+    .dashboard {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: 70px 1fr 50px;
+      grid-template-areas:
+        "head head"
+        "side main"
+        "foot foot";
+      gap: 12px;
+      padding: 12px;
+    }
+
+    .header {
+      grid-area: head;
+      background: #1e3a8a;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .sidebar {
+      grid-area: side;
+      background: #dbeafe;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .sidebar p {
+      margin-top: 18px;
+    }
+
+    .main {
+      grid-area: main;
+      padding: 10px;
+    }
+
+    .main h2 {
+      margin-bottom: 16px;
+    }
+
+    /* Automatically adjusts box columns */
+    .stats {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+    }
+
+    /* Flexbox inside each box */
+    .stat-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px #00000010;
+    }
+
+    .icon {
+      font-size: 28px;
+    }
+
+    .stat-card p {
+      margin-top: 8px;
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    .footer {
+      grid-area: foot;
+      background: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr 50px;
+        grid-template-areas:
+          "head"
+          "side"
+          "main"
+          "foot";
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="dashboard">
+
+    <header class="header">
+      <h2>My Dashboard</h2>
+    </header>
+
+    <aside class="sidebar">
+      <h3>Menu</h3>
+      <p>🏠 Home</p>
+      <p>📊 Analytics</p>
+      <p>👤 Profile</p>
+      <p>⚙️ Settings</p>
+    </aside>
+
+    <main class="main">
+      <h2>Overview</h2>
+
+      <div class="stats">
+
+        <div class="stat-card">
+          <span class="icon">👥</span>
+          <div>
+            <h3>Students</h3>
+            <p>120</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <span class="icon">📚</span>
+          <div>
+            <h3>Courses</h3>
+            <p>8</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <span class="icon">✅</span>
+          <div>
+            <h3>Tasks</h3>
+            <p>24</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <span class="icon">⭐</span>
+          <div>
+            <h3>Progress</h3>
+            <p>85%</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>My Dashboard | 2026</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
