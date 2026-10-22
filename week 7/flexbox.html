@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeLab - Landing Page</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #12203a;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+      background: #12203a;
+      color: white;
+      gap: 15px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .btn {
+      background: #ffb703;
+      border: 0;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Banner */
+    .hero {
+      min-height: 280px;
+      background: #eef2ff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px 20px;
+      gap: 15px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    /* Cards */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      flex: 1 1 200px;
+      padding: 25px;
+      background: white;
+      border: 1px solid #dbe2f0;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px #00000010;
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      color: #2f5bea;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-wrap: wrap;
+        padding: 14px;
+      }
+
+      nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .cards {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h2>CodeLab</h2>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+
+    <button class="btn">Join Us</button>
+  </nav>
+
+  <section class="hero" id="home">
+    <h1>Learn Coding Today</h1>
+    <p>Learn. Build. Create your future.</p>
+    <button class="btn">Explore Courses</button>
+  </section>
+
+  <section class="cards" id="courses">
+    <div class="card">
+      <h2>HTML & CSS</h2>
+      <p>Learn how to create and style websites.</p>
+    </div>
+
+    <div class="card">
+      <h2>JavaScript</h2>
+      <p>Make websites interactive with JavaScript.</p>
+    </div>
+
+    <div class="card" id="about">
+      <h2>Web Projects</h2>
+      <p>Practice coding by building real projects.</p>
+    </div>
+  </section>
+
+</body>
+</html>
